@@ -17,5 +17,6 @@ defineProps<Body1Props>()
   font-size: 14px;
   font-weight: bold;
   line-height: 18px;
+  margin: 0px;
 }
 </style>

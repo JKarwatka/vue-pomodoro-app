@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import BaseH2 from '@/components/BaseH2.vue'
+import BaseSwitch from '@/components/BaseSwitch.vue';
 </script>
 
 <template>
   <div class="main">
     <BaseH2 text="pomodoro" />
+    <BaseSwitch />
   </div>
 </template>
 
@@ -12,7 +14,7 @@ import BaseH2 from '@/components/BaseH2.vue'
 .main {
   min-height: 100vh;
   width: 100vw;
-  background-color: #161932;
+  background-color: #1E213F;
   display: flex;
   flex-direction: column;
   align-items: center;
