@@ -17,5 +17,6 @@ h2 {
   font-size: 28px;
   font-weight: bold;
   line-height: 34px;
+  margin: 0;
 }
 </style>

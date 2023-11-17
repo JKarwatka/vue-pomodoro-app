@@ -19,5 +19,6 @@ h4 {
   line-height: 16px;
   text-transform: uppercase;
   letter-spacing: 5px;
+  margin: 0;
 }
 </style>
