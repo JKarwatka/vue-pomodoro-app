@@ -18,5 +18,6 @@ h1 {
   font-weight: bold;
   line-height: 120px;
   letter-spacing: -5px;
+  margin: 0;
 }
 </style>

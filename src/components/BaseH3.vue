@@ -19,5 +19,6 @@ h3 {
   line-height: 19px;
   text-transform: uppercase;
   letter-spacing: 15px;
+  margin: 0;
 }
 </style>

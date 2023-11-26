@@ -1,22 +1,22 @@
 <script setup lang="ts">
-interface BaseBody2Props {
+interface TimeCounterProps {
   text: string
 }
 
-defineProps<BaseBody2Props>()
+defineProps<TimeCounterProps>()
 </script>
 
 <template>
-  <p class="body2">
+  <p class="body1">
     {{ text }}
   </p>
 </template>
 
 <style scoped>
-.body2 {
-  font-size: 12px;
+.body1 {
+  font-size: 14px;
   font-weight: bold;
-  line-height: 14px;
-  margin: 0;
+  line-height: 18px;
+  margin: 0px;
 }
 </style>

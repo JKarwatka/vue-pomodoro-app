@@ -1,4 +1,3 @@
-
 export const switchOptionsIds = {
   pomodoro: "pomodoro",
   shortBreak: "short-break",
@@ -20,3 +19,24 @@ export const switchOptions = [
   },
 ]
 
+export enum TimerState {
+  Running,
+  Paused,
+  Ended
+}
+
+
+export const mapTimerStateToButtonLabel = (timerState: TimerState): string => {
+  switch (timerState) {
+    case TimerState.Running: 
+      return 'Pause'
+    case TimerState.Paused:
+      return 'Start'
+    case TimerState.Ended:
+      return 'Restart'
+  }
+}
+export interface Time {
+  minutes: number,
+  seconds: number
+}
