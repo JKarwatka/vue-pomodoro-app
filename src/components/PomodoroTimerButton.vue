@@ -1,15 +1,12 @@
 <script setup lang="ts">
+import { useTimerStore } from '@/stores/TimerStore';
 import BaseH3 from './BaseH3.vue';
 
-interface PomodoroTimerButtonProps {
-  text: string
-}
-
-defineProps<PomodoroTimerButtonProps>()
+const store = useTimerStore()
 </script>
 
 <template>
-    <BaseH3 class='button' :text="text"/>
+    <BaseH3 class='button' :text="store.getButtonLabel" @click="store.onButtonClick" />
 </template>
 
 <style scoped>

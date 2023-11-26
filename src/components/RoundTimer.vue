@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { useTimerStore } from '@/stores/TimerStore';
 
+const store = useTimerStore()
 </script>
 
 <template>
@@ -18,13 +20,16 @@ svg {
 }
 
 svg circle {
-  stroke-dasharray: 1500px;
+  stroke-dasharray: 1444px;
   stroke-dashoffset: 0px;
   stroke-linecap: round;
   stroke-width: 12px;
   stroke: #F87070;
   fill: none;
-  animation: countdown 60s linear infinite forwards;
+  animation-name: countdown;
+  animation-timing-function: linear;
+  animation-duration: calc(v-bind(store.timerLengthMs/1000) * 1s);
+  animation-play-state: v-bind(store.getAnimationState);
 }
 
 @keyframes countdown {

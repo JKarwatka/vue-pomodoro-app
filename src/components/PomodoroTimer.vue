@@ -1,15 +1,21 @@
 <script setup lang="ts">
+import { useTimerStore } from '@/stores/TimerStore';
 import BaseH1 from './BaseH1.vue';
 import PomodoroTimerButton from './PomodoroTimerButton.vue';
 import CircularTimer from './RoundTimer.vue';
+
+const store = useTimerStore()
+
 </script>
 
 <template>
   <div class="container">
     <div class="inner-circle">
-        <BaseH1 text="00:00"/>
-        <PomodoroTimerButton text="pause"/>
         <CircularTimer/>
+        <div class="timer-container">
+          <BaseH1 :text="`${store.getTimerMinutes}:${store.getTimerSeconds}`"/>
+          <PomodoroTimerButton/>
+        </div>
     </div>
 
   </div>
@@ -26,15 +32,21 @@ import CircularTimer from './RoundTimer.vue';
 
 .inner-circle{
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: calc(100% - 44px );
   height: calc(100% - 44px );
   border-radius: 100%;
   background: #161932;
   margin: 22px;
+}
+
+.timer-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 </style>
